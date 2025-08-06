@@ -1,0 +1,838 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    position: relative;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    margin-right: 10px;
+    color: #ff5722; /* Orange color for music icon */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff5722;
+}
+
+.search-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 500px; /* Adjust as needed */
+    background-color: #333; /* Fallback background */
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* To handle image positioning */
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%; /* Adjust as needed */
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    object-position: center; /* Adjust as needed */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    padding: 0 50px;
+    max-width: 50%; /* Adjust content width */
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 80px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.register-button {
+    background-color: #ff5722; /* Orange */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #e64a19; /* Darker orange */
+}
+
+/* Dance Tour Section */
+.dance-tour-section {
+    background-color: #ff5722; /* Orange background */
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.dance-tour-section h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.dance-tour-section p {
+    font-size: 18px;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+}
+
+.card {
+    background-color: #333; /* Dark background for cards */
+    color: #fff;
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.card h3 {
+    font-size: 24px;
+    padding: 20px 20px 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    justify-content: center;
+    text-align: center;
+}
+
+.card p {
+    font-size: 16px;
+    padding: 0 20px 20px;
+    margin-bottom: 0; /* Override default paragraph margin */
+    text-align: center;
+}
+
+/* New Pricing Section */
+.pricing-section {
+    background-color: #333; /* Dark background */
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.pricing-section h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.pricing-section p {
+    font-size: 18px;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background-color: #ff5722; /* Orange background */
+    width: 300px;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-card .icon-wrapper {
+    margin-bottom: 20px;
+}
+
+.pricing-card .icon-wrapper i {
+    font-size: 70px; /* Adjust icon size */
+    color: #fff;
+}
+
+.pricing-card h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.pricing-card p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.pricing-card .price {
+    background-color: #333; /* Dark background for price */
+    color: #fff;
+    font-size: 28px;
+    font-weight: 400;
+    padding: 15px 0;
+    border-radius: 5px;
+    width: 100%;
+    display: block; /* Make it take full width */
+}
+
+/* New Amazing Dance Section */
+.amazing-dance-section {
+    display: flex;
+    align-items: center;
+    background-color: #ff5722; /* Orange background */
+    color: #fff;
+    padding: 0; /* Remove default padding as image and content will handle */
+    min-height: 500px; /* Ensure sufficient height */
+}
+
+.amazing-dance-image {
+    /* flex: 1; */
+width: 730px;
+    height: 500px; /* Fixed height for the image container */
+    overflow: hidden;
+}
+
+.amazing-dance-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block; /* Remove extra space below image */
+}
+
+.amazing-dance-content {
+    /* flex: 1; Takes equal space */
+    width: 710px; /* Fixed width for the content */
+    padding: 50px;
+    text-align: left;
+}
+
+.amazing-dance-content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.amazing-dance-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.read-more-button {
+    background-color: #333; /* Dark background */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-button:hover {
+    background-color: #000; /* Even darker */
+}
+
+/* New Best Dance Section */
+.best-dance-section {
+    display: flex;
+    align-items: center;
+    background-color: #ff5722; /* Orange background */
+    color: #fff;
+    padding: 0;
+    min-height: 500px; /* Ensure sufficient height */
+}
+
+.best-dance-content {
+    /* flex: 1; */
+    width: 730px; /* Fixed width for the content */
+    padding: 50px;
+    text-align: left;
+    position: relative; /* For dot pattern */
+    overflow: hidden; /* Hide overflowing dots */
+}
+
+/* Optional: Dot pattern effect */
+.best-dance-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 15px 15px; /* Adjust dot size and spacing */
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.best-dance-content h2,
+.best-dance-content p,
+.best-dance-content .read-more-button {
+    position: relative; /* Ensure content is above dots */
+    z-index: 1;
+}
+
+
+.best-dance-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.best-dance-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.best-dance-image {
+    /* flex: 1; */
+    height: 500px;
+    overflow: hidden;
+    width: 710px; /* Fixed width for the image container */
+}
+
+.best-dance-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* New Our Statistics Section */
+.statistics-section {
+    background-color: #333; /* Dark background */
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.statistics-section h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.statistics-section p {
+    font-size: 18px;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Adjust spacing between stats */
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.stat-item h3 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #ff5722; /* Orange for numbers */
+}
+
+.stat-item p {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0; /* Override default paragraph margin */
+}
+
+/* New Testimonial/Quote Section */
+.quote-section {
+    background-color: #333; /* Dark background */
+    color: #fff;
+    padding: 100px 0 200px; /* Adjust padding-bottom to allow image overlap */
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* To contain the background image */
+}
+
+/* Background image for the quote section */
+.quote-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image/Image5.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center bottom; /* Adjust to position the dancer */
+    background-repeat: no-repeat;
+    opacity: 0.7; /* Adjust transparency as needed */
+    z-index: 0;
+}
+
+.quote-section .container {
+    position: relative; /* Ensure content is above background image */
+    z-index: 1;
+    max-width: 800px; /* Limit width of text */
+}
+
+.quote-section .quote-text {
+    font-size: 28px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.quote-section .quote-author {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* New Subscribe Section */
+.subscribe-section {
+    background-color: #ff5722; /* Orange background */
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    margin-top: -100px; /* Pulls it up to overlap the section above */
+    z-index: 2; /* Ensure it's above the quote section */
+}
+
+.subscribe-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 15px 15px; /* Adjust dot size and spacing */
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.subscribe-section h2,
+.subscribe-section p,
+.subscribe-section .subscribe-form {
+    position: relative;
+    z-index: 1;
+}
+
+.subscribe-section h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.subscribe-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.subscribe-form input[type="email"] {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background-color: #f7f7f7; /* Light background for input */
+    color: #333;
+}
+
+.subscribe-form button[type="submit"] {
+    background-color: #333; /* Dark button */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-form button[type="submit"]:hover {
+    background-color: #000;
+}
+
+/* New Footer Section */
+footer {
+    background-color: #333; /* Dark background */
+    color: #fff;
+    padding: 80px 0;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows columns to wrap if needed, though not required for fixed design */
+    gap: 40px; /* Space between columns */
+}
+
+.footer-col {
+    flex: 1; /* Distribute space relatively */
+    min-width: 200px; /* Minimum width for columns */
+}
+
+.footer-col h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.footer-col p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ff5722; /* Orange hover */
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #ff5722; /* Orange icons */
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+/* New Testimonial/Quote Section */
+.quote-section {
+    background-color: #333; /* Dark background */
+    color: #fff;
+    padding: 100px 0 200px; /* Adjust padding-bottom to allow image overlap */
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* To contain the background image */
+}
+
+/* Background image for the quote section */
+.quote-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Image/Image4.jpeg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center bottom; /* Adjust to position the dancer */
+    background-repeat: no-repeat;
+    opacity: 0.7; /* Adjust transparency as needed */
+    z-index: 0;
+}
+
+.quote-section .container {
+    position: relative; /* Ensure content is above background image */
+    z-index: 1;
+    max-width: 800px; /* Limit width of text */
+}
+
+.quote-section .quote-text {
+    font-size: 28px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.quote-section .quote-author {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* New Subscribe Section */
+.subscribe-section {
+    background-color: #ff5722; /* Orange background */
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    margin-top: -100px; /* Pulls it up to overlap the section above */
+    z-index: 2; /* Ensure it's above the quote section */
+}
+
+.subscribe-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 15px 15px;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.subscribe-section h2,
+.subscribe-section p,
+.subscribe-section .subscribe-form {
+    position: relative;
+    z-index: 1;
+}
+
+.subscribe-section h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.subscribe-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.subscribe-form input[type="email"] {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background-color: #f7f7f7; /* Light background for input */
+    color: #333;
+}
+
+.subscribe-form button[type="submit"] {
+    background-color: #333; /* Dark button */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-form button[type="submit"]:hover {
+    background-color: #000;
+}
+
+/* New Footer Section */
+footer {
+    background-color: #333; /* Dark background */
+    color: #fff;
+    padding: 80px 0;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows columns to wrap if needed, though not required for fixed design */
+    gap: 40px; /* Space between columns */
+}
+
+.footer-col {
+    flex: 1; /* Distribute space relatively */
+    min-width: 200px; /* Minimum width for columns */
+}
+
+.footer-col h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.footer-col p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ff5722; /* Orange hover */
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #ff5722; /* Orange icons */
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
